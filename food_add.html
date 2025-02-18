@@ -1,0 +1,264 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Food Ad</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+        .ad-container {
+            width: 100%;
+            max-width: 600px;
+            height: 250px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            padding: 15px;
+        }
+        .food-images {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll 10s linear infinite;
+        }
+        .food-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: wave 5s ease-in-out infinite;
+        }
+        .food-img:nth-child(1) { animation-delay: 0s; }
+        .food-img:nth-child(2) { animation-delay: 0.5s; }
+        .food-img:nth-child(3) { animation-delay: 1s; }
+        .food-img:nth-child(4) { animation-delay: 1.5s; }
+        .food-img:nth-child(5) { animation-delay: 2s; }
+        .food-img:nth-child(6) { animation-delay: 2.5s; }
+        
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-10px) scale(1.2); }
+        }
+        
+        .content {
+            margin-top: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 5px 0;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .cta-button:hover {
+            background-color: #ff3d00;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
+        }
+        .cta-button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="ad-container">
+        <div class="food-images">
+            <img src="https://source.unsplash.com/80x80/?burger" alt="Burger" class="food-img">
+            <img src="https://source.unsplash.com/80x80/?pizza" alt="Pizza" class="food-img">
+            <img src="https://source.unsplash.com/80x80/?sushi" alt="Sushi" class="food-img">
+            <img src="https://source.unsplash.com/80x80/?pasta" alt="Pasta" class="food-img">
+            <img src="https://source.unsplash.com/80x80/?salad" alt="Salad" class="food-img">
+            <img src="https://source.unsplash.com/80x80/?dessert" alt="Dessert" class="food-img">
+        </div>
+        <div class="content">
+            <h2>Delicious Food Deals!</h2>
+            <p>Get 20% off on your first order. Limited time only!</p>
+            <button class="cta-button" onclick="orderNow()">Order Now</button>
+        </div>
+    </div>
+    
+    <script>
+        function orderNow() {
+            alert("Thank you for ordering! Your delicious meal is on the way 🍔");
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!-- okay -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Food Ad</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+        .ad-container {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            padding: 15px;
+        }
+        .food-images {
+            /* display: flex;
+            justify-content: space-between; */
+            gap: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+            /* border: 1px solid red; */
+            /* margin-bottom: 30px; */
+
+            padding-bottom: 50px;
+         
+        }
+        .food-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: wave 8s ease-in-out infinite;
+            margin-top: 100px;
+        }
+        .food-img:nth-child(1) { animation-delay: 0s; }
+        .food-img:nth-child(2) { animation-delay: 0.5s; }
+        .food-img:nth-child(3) { animation-delay: 1s; }
+        .food-img:nth-child(4) { animation-delay: 1.5s; }
+        .food-img:nth-child(5) { animation-delay: 2s; }
+        .food-img:nth-child(6) { animation-delay: 2.5s; }
+        
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        @keyframes wave {
+            /* 0%, 100% { transform: translateY(0) scale(1); } */
+            0%, 100% { transform: translateY(50px) scale(1); }
+            50% { transform: translateY(-50px) scale(1.1); }
+        }
+        
+        .content {
+            margin-top: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 5px 0;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .cta-button:hover {
+            background-color: #ff3d00;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
+        }
+        .cta-button:active {
+            transform: scale(0.95);
+        }
+
+
+
+    .backGround-image {
+        width: 100%;
+        height: 100vh; /* Full height of the viewport */
+        background-image: url('your-image.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="ad-container backGround-image">
+        <div class="food-images">
+            <img src="https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=" alt="Burger" class="food-img">
+            <img src="https://t3.ftcdn.net/jpg/03/07/65/18/360_F_307651812_yiydVwvUeeZlTCuUs4E2aqsUMUlwIo86.jpg" alt="Pizza" class="food-img">
+            <img src="https://img.freepik.com/premium-photo/slate-board-with-sushi-set-isolated-white-background_185193-75522.jpg" alt="Sushi" class="food-img">
+            <img src="https://static.vecteezy.com/system/resources/previews/030/660/713/large_2x/spaghetti-with-white-background-high-quality-ultra-free-photo.jpg" alt="Pasta" class="food-img">
+            <img src="https://img.freepik.com/free-photo/salmon-avocado-salad-isolated-white-background_123827-20214.jpg" alt="Salad" class="food-img">
+            <img src="https://www.shutterstock.com/image-photo/various-sweets-arranged-on-one-600nw-2313003543.jpg" alt="Dessert" class="food-img">
+        </div>
+        <div class="content">
+            <h2>Delicious Food Deals!</h2>
+            <p>Get 20% off on your first order. Limited time only!</p>
+            <button class="cta-button" onclick="orderNow()">Order Now</button>
+        </div>
+    </div>
+    
+    <script>
+        function orderNow() {
+            alert("Thank you for ordering! Your delicious meal is on the way 🍔");
+        }
+    </script>
+</body>
+</html> 
+
+
+
+
