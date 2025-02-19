@@ -12,12 +12,9 @@
             height: 100vh;
             background-color: none;
             margin: 0;
-            /* max-width: 1000px; */
         }
         .ad-container {
             width: 100%;
-            /* max-width: 1000px; */
-            /* height: 600px; */
             height: 100%;
             background-color: none;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -26,19 +23,19 @@
             overflow: hidden;
             position: relative;
             padding: 15px;
-           
         }
         .food-images {
             display: flex;
             gap: 10px;
-            /* overflow: hidden; */
             white-space: nowrap;
             animation: scroll 20s linear infinite;
             padding: 50px;
+            border:1px solid red;
         }
         .food-img-wrapper {
             display: inline-block;
             animation: wave 8s ease-in-out infinite;
+            position: relative;
         }
         .food-img {
             width: 120px;
@@ -56,40 +53,6 @@
         .food-img-wrapper:nth-child(5) { animation-delay: 2s; }
         .food-img-wrapper:nth-child(6) { animation-delay: 2.5s; }
 
-
-/* test */
- 
-
-  /* Overlay styles */
-  .image-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .overlay {
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            border-radius: 50%;
-        }
-
-        .image-container:hover .overlay {
-            opacity: 1;
-        }
-
-
-/* test end */
-
-
         /* Scroll Animation */
         @keyframes scroll {
             0% { transform: translateX(100%); }
@@ -102,30 +65,19 @@
             50% { transform: translateY(-50px); }
         }
 
-        /* Hover Effect */
-        /* .food-img-wrapper:hover {
-            animation-play-state: paused; 
-        }
-        .food-img-wrapper:hover .food-img {
-            transform: scale(1.3); 
-        } */
-
-
         /* Pause scrolling animation when hovering over images */
-            .food-images:hover {
-                animation-play-state: paused;
-            }
+        .food-images:hover {
+            animation-play-state: paused;
+        }
 
-            /* Pause wave animation for the hovered image and scale it up */
-            .food-img-wrapper:hover {
-                animation-play-state: paused;
-            }
+        /* Pause wave animation for the hovered image and scale it up */
+        .food-img-wrapper:hover {
+            animation-play-state: paused;
+        }
 
-            .food-img-wrapper:hover .food-img {
-                transform: scale(1.3) !important;
-            }
-
-            
+        .food-img-wrapper:hover .food-img {
+            transform: scale(1.3) !important;
+        }
 
         .content {
             margin-top: 10px;
@@ -167,82 +119,54 @@
             background-repeat: no-repeat;
         }
 
-     
-
-        /* tile design start */
-
-        .title {
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-           display: inline-block;
-          
-        }
-
-
-        .title-container {
-            height: 40px; 
-            /* Adjust based on font size */
-        }
-
-        /* .cursor {
+        /* Overlay styles */
+        .image-container {
+            position: relative;
             display: inline-block;
-            width: 5px;
-            height: 30px;
-            background-color: white;
-            animation: blink 0.6s infinite;
-        } */
-
-        @keyframes blink {
-            50% { opacity: 0; }
         }
 
+        .overlay {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 50%;
+        }
 
-        /* title design end */
-
-
-
-
-
-
-/* overlay design start */
-
-
-
-
-/* overlay design end */
-
-
-
-
-
-
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
 
         /* last image design start */
-
         .large-img {
             animation: wave 8s ease-in-out infinite;
         }
 
         .large-food-img {
-            width: 300px;  /* Make it bigger */
-            height: 250px; /* Adjust as needed */
+            width: 300px;
+            height: 250px;
             object-fit: contain;
-            border-radius: 15px; /* Not circular */
-            margin-top: 80px; /* Adjust position */
-
+            border-radius: 15px;
+            margin-top: 80px;
         }
 
         /* last image design end */
 
-        .description{
+        .description {
             color: white;
             font-size: 20px;
         }
 
-
         /* button design start */
-                .cta-button {
+        .cta-button {
             background-color: #e21b70;
             color: white;
             font-size: 20px;
@@ -263,40 +187,6 @@
             transform: scale(0.9);
         }
 
-
-
-        .pop-up {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        border-radius: 10px;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        opacity: 0; /* Initially hidden */
-        visibility: hidden; /* Prevent clicks when hidden */
-        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Smooth fade */
-        z-index: 1000;
-    }
-
-    .pop-up img {
-        width: 400px;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .special-text{
-        color: white;
-        
-    }
-
-
-
-
         /* Animation: The button pulses (big and small) continuously */
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -316,62 +206,16 @@
     <div class="ad-container bg_image">
         <div class="food-images">
             <div class="food-img-wrapper large-img">
-
                 <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=73" class="food-img" target="_blank">
-
                     <img src="https://i.ibb.co.com/qM5ZQjzd/456333530-932266622277987-5544921479019419555-n-removebg-preview.png" alt="Special Dish" class="food-img large-food-img">
                 </a>
             </div>
             
-            <!-- <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=85"
-                class="food-img" target="_blank" 
-                >
-                <img src="https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=" alt="Burger" class="food-img">
-            
-                </a>
-            </div>
-
-            
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=73" class="food-img" target="_blank">
-                    
-                    <img src="https://t3.ftcdn.net/jpg/03/07/65/18/360_F_307651812_yiydVwvUeeZlTCuUs4E2aqsUMUlwIo86.jpg" alt="Pizza" class="food-img">
-                </a>
-            </div>
-
-            <div class="food-img-wrapper">
-                <img src="https://img.freepik.com/premium-photo/slate-board-with-sushi-set-isolated-white-background_185193-75522.jpg" alt="Sushi" class="food-img">
-            </div>
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&expedition=pickup&cuisines=103" class="food-img" target="_blank">
-
-                    <img src="https://static.vecteezy.com/system/resources/previews/030/660/713/large_2x/spaghetti-with-white-background-high-quality-ultra-free-photo.jpg" alt="Pasta" class="food-img">
-                </a>
-            </div>
-            <div class="food-img-wrapper">
-                <img src="https://img.freepik.com/free-photo/salmon-avocado-salad-isolated-white-background_123827-20214.jpg" alt="Salad" class="food-img">
-            </div>
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&query=sweet" class="food-img" target="_blank">
-
-                    <img src="https://www.shutterstock.com/image-photo/various-sweets-arranged-on-one-600nw-2313003543.jpg" alt="Dessert" class="food-img">
-                </a>
-            </div>
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&expedition=delivery&query=biryani" class="food-img" target="_blank">
-
-                    <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="Dessert" class="food-img">
-                </a>
-            </div> -->
-
-
-
             <div class="food-img-wrapper">
                 <div class="image-container">
                     <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=85" target="_blank">
                         <img src="https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=" alt="Burger" class="food-img">
-                        <div class="overlay">Click for Details</div>
+                        <div class="overlay">See Details</div>
                     </a>
                 </div>
             </div>
@@ -380,7 +224,7 @@
                 <div class="image-container">
                     <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=73" target="_blank">
                         <img src="https://t3.ftcdn.net/jpg/03/07/65/18/360_F_307651812_yiydVwvUeeZlTCuUs4E2aqsUMUlwIo86.jpg" alt="Pizza" class="food-img">
-                        <div class="overlay">Click for Details</div>
+                        <div class="overlay">See Details</div>
                     </a>
                 </div>
             </div>
@@ -388,7 +232,7 @@
             <div class="food-img-wrapper">
                 <div class="image-container">
                     <img src="https://img.freepik.com/premium-photo/slate-board-with-sushi-set-isolated-white-background_185193-75522.jpg" alt="Sushi" class="food-img">
-                    <div class="overlay">Click for Details</div>
+                    <div class="overlay">See Details</div>
                 </div>
             </div>
             
@@ -396,7 +240,7 @@
                 <div class="image-container">
                     <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&expedition=pickup&cuisines=103" target="_blank">
                         <img src="https://static.vecteezy.com/system/resources/previews/030/660/713/large_2x/spaghetti-with-white-background-high-quality-ultra-free-photo.jpg" alt="Pasta" class="food-img">
-                        <div class="overlay">Click for Details</div>
+                        <div class="overlay">See Details</div>
                     </a>
                 </div>
             </div>
@@ -404,7 +248,7 @@
             <div class="food-img-wrapper">
                 <div class="image-container">
                     <img src="https://img.freepik.com/free-photo/salmon-avocado-salad-isolated-white-background_123827-20214.jpg" alt="Salad" class="food-img">
-                    <div class="overlay">Click for Details</div>
+                    <div class="overlay">See Details</div>
                 </div>
             </div>
             
@@ -412,7 +256,7 @@
                 <div class="image-container">
                     <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&query=sweet" target="_blank">
                         <img src="https://www.shutterstock.com/image-photo/various-sweets-arranged-on-one-600nw-2313003543.jpg" alt="Dessert" class="food-img">
-                        <div class="overlay">Click for Details</div>
+                        <div class="overlay">See Details</div>
                     </a>
                 </div>
             </div>
@@ -421,53 +265,34 @@
                 <div class="image-container">
                     <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&expedition=delivery&query=biryani" target="_blank">
                         <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="Biryani" class="food-img">
-                        <div class="overlay">Click for Details</div>
+                        <div class="overlay">See Details</div>
                     </a>
                 </div>
             </div>
-
-
-            <!-- <div class="pop-up">
-                <img src="https://i.ibb.co.com/yFZpj5nV/1679720350250.jpg" alt="Biryani" class="food-img">
-            </div> -->
-
-
-         
-          
         </div>
         <div class="content">
             <div class="title-container">
                 <h1 class="title" id="typing-text"></h1>
             </div>
-       
             <p class="description">Get 20% off on your first order. Limited time only!</p>
             <button class="cta-button" onclick="orderNow()">Order Now</button>
         </div>
     </div>
-
-
-    <div id="pop-up" class="pop-up">
-        <img src="https://i.ibb.co.com/yFZpj5nV/1679720350250.jpg" alt="Special Offer">
-        <p class="special-text">Special Ramadan Offer! 🎉</p>
-    </div>
-    
     
     <script>
         function orderNow() {
             alert("Thank you for ordering! Your delicious meal is on the way 🍔");
         }
 
-
-
         // Typing Effect
         const texts = [
-    "Food Panda! ইফতারির সুস্বাদু আয়োজন - ",
-    "খেজুর ও শরবত দিয়ে শুরু করুন!",
-    "পেঁয়াজু, বেগুনি, চপ - মজাদার সব!",
-    "ঠান্ডা লাচ্ছি ও ফলের জুস!",
-    "সেহরিতে পরোটা আর ভুনা মাংস!",
-    "Food Panda-তে ইফতারি অর্ডার করুন!"
-];
+            "Food Panda! ইফতারির সুস্বাদু আয়োজন - ",
+            "খেজুর ও শরবত দিয়ে শুরু করুন!",
+            "পেঁয়াজু, বেগুনি, চপ - মজাদার সব!",
+            "ঠান্ডা লাচ্ছি ও ফলের জুস!",
+            "সেহরিতে পরোটা আর ভুনা মাংস!",
+            "Food Panda-তে ইফতারি অর্ডার করুন!"
+        ];
         let index = 0;
         let charIndex = 0;
         let currentText = "";
@@ -497,27 +322,6 @@
         }
 
         typeEffect();
-
-
-        // Function to show the pop-up smoothly
-        function showPopUp() {
-            let popUp = document.getElementById("pop-up");
-            popUp.style.opacity = "1";
-            popUp.style.visibility = "visible";
-
-            setTimeout(() => {
-                popUp.style.opacity = "0";
-                popUp.style.visibility = "hidden";
-            }, 2000); // Hide smoothly after 2 seconds
-        }
-
-        // Run the pop-up function infinitely after every full wave scroll (20 seconds)
-        let scrollDuration = 20000; // 20 seconds for full scroll
-        setInterval(showPopUp, scrollDuration);
-
-
-
-
     </script>
 </body>
 </html>
