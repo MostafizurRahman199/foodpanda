@@ -43,7 +43,11 @@
         .food-img {
             width: 120px;
             height: 120px;
+
+            /* width: 200px;
+            height: 200px; */
             object-fit: cover;
+            /* object-fit: contain; */
             border-radius: 50%;
             margin: 0 5px;
             margin-top: 100px;
@@ -60,8 +64,8 @@
 /* test */
  
 
-  /* Overlay styles */
-  .image-container {
+        /* Overlay styles */
+        .image-container {
             position: relative;
             display: inline-block;
         }
@@ -336,8 +340,11 @@
             
             <div class="food-img-wrapper">
                 <div class="image-container">
-                    <img src="https://img.freepik.com/premium-photo/slate-board-with-sushi-set-isolated-white-background_185193-75522.jpg" alt="Sushi" class="food-img">
-                    <div class="overlay">Click for Details</div>
+                    <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=132" target="_blank">
+
+                        <img src="https://simshomekitchen.com/wp-content/uploads/2022/04/tandoori-skewers.png" alt="Kabab" class="food-img">
+                        <div class="overlay">Click for Details</div>
+                    </a>
                 </div>
             </div>
             
@@ -352,8 +359,11 @@
             
             <div class="food-img-wrapper">
                 <div class="image-container">
-                    <img src="https://img.freepik.com/free-photo/salmon-avocado-salad-isolated-white-background_123827-20214.jpg" alt="Salad" class="food-img">
-                    <div class="overlay">Click for Details</div>
+                    <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=249">
+
+                        <img src="https://old.thefinancialexpress.com.bd/uploads/1638089158.jpg" alt="sweet" class="food-img">
+                        <div class="overlay">Click for Details</div>
+                    </a>
                 </div>
             </div>
             
@@ -390,7 +400,10 @@
             </div>
        
             <p class="description">Get 20% off on your first order. Limited time only!</p>
-            <button class="cta-button" onclick="orderNow()">Order Now</button>
+            <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=73">
+
+                <button class="cta-button" >Order Now</button>
+            </a>
         </div>
     </div>
 
@@ -437,7 +450,7 @@
 
         // Typing Effect
         const texts = [
-            "Food Panda! ইফতারির সুস্বাদু আয়োজন - ",
+            "FoodPanda! ইফতারির সুস্বাদু আয়োজন - ",
             "খেজুর ও শরবত দিয়ে শুরু করুন!",
             "পেঁয়াজু, বেগুনি, চপ - মজাদার সব!",
             "ঠান্ডা লাচ্ছি ও ফলের জুস!",
