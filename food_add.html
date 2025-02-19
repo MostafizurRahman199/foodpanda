@@ -80,6 +80,7 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             border-radius: 50%;
+           
         }
 
         .image-container:hover .overlay {
@@ -151,6 +152,8 @@
             cursor: pointer;
             position: relative;
         }
+
+
         .cta-button:hover {
             background-color: #ff3d00;
             box-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
@@ -173,7 +176,7 @@
 
         .title {
             color: white;
-            font-size: 30px;
+            font-size: 40px;
             font-weight: bold;
            display: inline-block;
           
@@ -181,7 +184,7 @@
 
 
         .title-container {
-            height: 40px; 
+            height: 60px; 
             /* Adjust based on font size */
         }
 
@@ -199,21 +202,6 @@
 
 
         /* title design end */
-
-
-
-
-
-
-/* overlay design start */
-
-
-
-
-/* overlay design end */
-
-
-
 
 
 
@@ -242,7 +230,7 @@
 
 
         /* button design start */
-                .cta-button {
+        .cta-button {
             background-color: #e21b70;
             color: white;
             font-size: 20px;
@@ -265,7 +253,7 @@
 
 
 
-        .pop-up {
+    .pop-up {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -281,20 +269,23 @@
         visibility: hidden; /* Prevent clicks when hidden */
         transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Smooth fade */
         z-index: 1000;
+        
     }
 
     .pop-up img {
         width: 400px;
         height: auto;
         border-radius: 10px;
+        box-shadow: 0 0 10px #e21b70;
     }
+
+
 
     .special-text{
         color: white;
-        
+        font-size: 20px;
     }
-
-
+        
 
 
         /* Animation: The button pulses (big and small) continuously */
@@ -310,6 +301,8 @@
         }
 
         /* Button Design end */
+
+
     </style>
 </head>
 <body>
@@ -322,50 +315,6 @@
                     <img src="https://i.ibb.co.com/qM5ZQjzd/456333530-932266622277987-5544921479019419555-n-removebg-preview.png" alt="Special Dish" class="food-img large-food-img">
                 </a>
             </div>
-            
-            <!-- <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=85"
-                class="food-img" target="_blank" 
-                >
-                <img src="https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=" alt="Burger" class="food-img">
-            
-                </a>
-            </div>
-
-            
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&cuisines=73" class="food-img" target="_blank">
-                    
-                    <img src="https://t3.ftcdn.net/jpg/03/07/65/18/360_F_307651812_yiydVwvUeeZlTCuUs4E2aqsUMUlwIo86.jpg" alt="Pizza" class="food-img">
-                </a>
-            </div>
-
-            <div class="food-img-wrapper">
-                <img src="https://img.freepik.com/premium-photo/slate-board-with-sushi-set-isolated-white-background_185193-75522.jpg" alt="Sushi" class="food-img">
-            </div>
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&expedition=pickup&cuisines=103" class="food-img" target="_blank">
-
-                    <img src="https://static.vecteezy.com/system/resources/previews/030/660/713/large_2x/spaghetti-with-white-background-high-quality-ultra-free-photo.jpg" alt="Pasta" class="food-img">
-                </a>
-            </div>
-            <div class="food-img-wrapper">
-                <img src="https://img.freepik.com/free-photo/salmon-avocado-salad-isolated-white-background_123827-20214.jpg" alt="Salad" class="food-img">
-            </div>
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&query=sweet" class="food-img" target="_blank">
-
-                    <img src="https://www.shutterstock.com/image-photo/various-sweets-arranged-on-one-600nw-2313003543.jpg" alt="Dessert" class="food-img">
-                </a>
-            </div>
-            <div class="food-img-wrapper">
-                <a href="https://www.foodpanda.com.bd/restaurants/new?lng=90.39959&lat=23.71325&vertical=restaurants&expedition=delivery&query=biryani" class="food-img" target="_blank">
-
-                    <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="Dessert" class="food-img">
-                </a>
-            </div> -->
-
-
 
             <div class="food-img-wrapper">
                 <div class="image-container">
@@ -450,6 +399,33 @@
         <img src="https://i.ibb.co.com/yFZpj5nV/1679720350250.jpg" alt="Special Offer">
         <p class="special-text">Special Ramadan Offer! 🎉</p>
     </div>
+
+
+    <!-- <audio id="background-audio" autoplay loop muted="false">
+        <source src="ramadan-reverie-middle-east-ramadan-music-278003.mp3" type="audio/mpeg">
+        <source src="ramadan-reverie-middle-east-ramadan-music-278003.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio> -->
+
+
+    <!-- <audio id="background-audio" autoplay loop>
+        <source src="ramadan-reverie-middle-east-ramadan-music-278003.mp3" type="audio/mpeg">
+        <source src="ramadan-reverie-middle-east-ramadan-music-278003.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio> -->
+
+
+    <audio id="background-audio" autoplay loop>
+        <source src="ramadan-reverie-middle-east-ramadan-music-278003.mp3" type="audio/mpeg">
+        <source src="ramadan-reverie-middle-east-ramadan-music-278003.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+    
+    
+
     
     
     <script>
@@ -461,13 +437,15 @@
 
         // Typing Effect
         const texts = [
-    "Food Panda! ইফতারির সুস্বাদু আয়োজন - ",
-    "খেজুর ও শরবত দিয়ে শুরু করুন!",
-    "পেঁয়াজু, বেগুনি, চপ - মজাদার সব!",
-    "ঠান্ডা লাচ্ছি ও ফলের জুস!",
-    "সেহরিতে পরোটা আর ভুনা মাংস!",
-    "Food Panda-তে ইফতারি অর্ডার করুন!"
-];
+            "Food Panda! ইফতারির সুস্বাদু আয়োজন - ",
+            "খেজুর ও শরবত দিয়ে শুরু করুন!",
+            "পেঁয়াজু, বেগুনি, চপ - মজাদার সব!",
+            "ঠান্ডা লাচ্ছি ও ফলের জুস!",
+            "সেহরিতে পরোটা আর ভুনা মাংস!",
+            "Food Panda-তে ইফতারি অর্ডার করুন!"
+        ];
+
+
         let index = 0;
         let charIndex = 0;
         let currentText = "";
@@ -508,12 +486,104 @@
             setTimeout(() => {
                 popUp.style.opacity = "0";
                 popUp.style.visibility = "hidden";
-            }, 2000); // Hide smoothly after 2 seconds
+            }, 4000); // Hide smoothly after 2 seconds
         }
 
         // Run the pop-up function infinitely after every full wave scroll (20 seconds)
-        let scrollDuration = 20000; // 20 seconds for full scroll
+        let scrollDuration = 15000; // 20 seconds for full scroll
         setInterval(showPopUp, scrollDuration);
+
+
+        // // Play audio on user interaction
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     let audio = document.getElementById("background-audio");
+
+        //     audio.muted = false; // Ensure it's not muted
+
+        //     let playPromise = audio.play();
+            
+        //     if (playPromise !== undefined) {
+        //         playPromise.catch(() => {
+        //             document.body.addEventListener("click", () => {
+        //                 audio.play();
+        //             }, { once: true }); // Play after user clicks
+        //         });
+        //     }
+        // });
+
+
+    //     document.addEventListener("DOMContentLoaded", function () {
+    //     let audio = document.getElementById("background-audio");
+
+    //     // Try to play the audio immediately
+    //     function playAudio() {
+    //         let playPromise = audio.play();
+
+    //         if (playPromise !== undefined) {
+    //             playPromise.then(() => {
+    //                 console.log("Audio started successfully.");
+    //                 audio.muted = false; // Ensure audio is not muted
+    //             }).catch(error => {
+    //                 console.log("Auto-play blocked. Retrying...");
+    //                 setTimeout(playAudio, 1000); // Retry after 1 second
+    //             });
+    //         }
+    //     }
+
+    //     playAudio(); // Start trying to play audio
+    // });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.getElementById("background-audio");
+
+    function playAudio() {
+        audio.muted = true; // Start muted (bypasses restrictions)
+        audio.volume = 0;    // Start with volume 0
+
+        let playPromise = audio.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                console.log("Audio started successfully.");
+                
+                // Unmute & gradually increase volume after a delay
+                setTimeout(() => {
+                    audio.muted = false;
+                    let volume = 0;
+                    let fadeIn = setInterval(() => {
+                        if (volume < 1) {
+                            volume += 0.1;
+                            audio.volume = volume.toFixed(1);
+                        } else {
+                            clearInterval(fadeIn);
+                        }
+                    }, 200); // Increase volume every 200ms
+                }, 1000); // Start increasing volume after 1 second
+                
+            }).catch(error => {
+                console.log("Auto-play blocked, retrying...");
+                setTimeout(playAudio, 1000); // Retry every 1 second if blocked
+            });
+        }
+    }
+
+    // Ensure audio is loaded and can play
+    audio.addEventListener("canplaythrough", playAudio);
+
+    // Try playing the audio immediately
+    playAudio();
+});
+
+
+
+
+
+
+
+
+
 
 
 
