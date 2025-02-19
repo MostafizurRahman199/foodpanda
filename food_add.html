@@ -12,11 +12,13 @@
             height: 100vh;
             background-color: none;
             margin: 0;
+            /* max-width: 1000px; */
         }
         .ad-container {
             width: 100%;
-            max-width: 1000px;
-            height: 500px;
+            /* max-width: 1000px; */
+            /* height: 600px; */
+            height: 100%;
             background-color: none;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             border-radius: 15px;
@@ -24,14 +26,15 @@
             overflow: hidden;
             position: relative;
             padding: 15px;
+           
         }
         .food-images {
             display: flex;
             gap: 10px;
-            overflow: hidden;
+            /* overflow: hidden; */
             white-space: nowrap;
             animation: scroll 20s linear infinite;
-            padding-bottom: 50px;
+            padding: 50px;
         }
         .food-img-wrapper {
             display: inline-block;
@@ -129,11 +132,106 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+
+     
+
+        /* tile design start */
+
+        .title {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+           display: inline-block;
+          
+        }
+
+
+        .title-container {
+            height: 40px; 
+            /* Adjust based on font size */
+        }
+
+        /* .cursor {
+            display: inline-block;
+            width: 5px;
+            height: 30px;
+            background-color: white;
+            animation: blink 0.6s infinite;
+        } */
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+
+        /* title design end */
+
+        /* last image design start */
+
+        .large-img {
+            animation: wave 8s ease-in-out infinite;
+        }
+
+        .large-food-img {
+            width: 300px;  /* Make it bigger */
+            height: 250px; /* Adjust as needed */
+            object-fit: contain;
+            border-radius: 15px; /* Not circular */
+            margin-top: 80px; /* Adjust position */
+
+        }
+
+        /* last image design end */
+
+        .description{
+            color: white;
+            font-size: 20px;
+        }
+
+
+        /* button design start */
+                .cta-button {
+            background-color: #ff6600;
+            color: white;
+            font-size: 20px;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover Effect: Button grows bigger */
+        .cta-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Click Effect: Button shrinks and then grows back */
+        .cta-button:active {
+            transform: scale(0.9);
+        }
+
+        /* Animation: The button pulses (big and small) continuously */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Apply the animation */
+        .cta-button {
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        /* Button Design end */
     </style>
 </head>
 <body>
     <div class="ad-container bg_image">
         <div class="food-images">
+            <div class="food-img-wrapper large-img">
+                <img src="https://i.ibb.co.com/qM5ZQjzd/456333530-932266622277987-5544921479019419555-n-removebg-preview.png" alt="Special Dish" class="food-img large-food-img">
+            </div>
             <div class="food-img-wrapper">
                 <img src="https://media.istockphoto.com/id/520410807/photo/cheeseburger.jpg?s=612x612&w=0&k=20&c=fG_OrCzR5HkJGI8RXBk76NwxxTasMb1qpTVlEM0oyg4=" alt="Burger" class="food-img">
             </div>
@@ -152,10 +250,14 @@
             <div class="food-img-wrapper">
                 <img src="https://www.shutterstock.com/image-photo/various-sweets-arranged-on-one-600nw-2313003543.jpg" alt="Dessert" class="food-img">
             </div>
+          
         </div>
         <div class="content">
-            <h2>Delicious Food Deals!</h2>
-            <p>Get 20% off on your first order. Limited time only!</p>
+            <div class="title-container">
+                <h1 class="title" id="typing-text"></h1>
+            </div>
+       
+            <p class="description">Get 20% off on your first order. Limited time only!</p>
             <button class="cta-button" onclick="orderNow()">Order Now</button>
         </div>
     </div>
@@ -164,6 +266,49 @@
         function orderNow() {
             alert("Thank you for ordering! Your delicious meal is on the way 🍔");
         }
+
+
+
+        // Typing Effect
+        const texts = [
+    "Food Panda! ইফতারির সুস্বাদু আয়োজন - ",
+    "খেজুর ও শরবত দিয়ে শুরু করুন!",
+    "পেঁয়াজু, বেগুনি, চপ - মজাদার সব!",
+    "ঠান্ডা লাচ্ছি ও ফলের জুস!",
+    "সেহরিতে পরোটা আর ভুনা মাংস!",
+    "Food Panda-তে ইফতারি অর্ডার করুন!"
+];
+        let index = 0;
+        let charIndex = 0;
+        let currentText = "";
+        let isDeleting = false;
+        const speed = 100; // Typing speed
+        const delay = 1000; // Delay before deleting
+
+        function typeEffect() {
+            if (!isDeleting && charIndex < texts[index].length) {
+                currentText += texts[index][charIndex];
+                charIndex++;
+            } else if (isDeleting && charIndex > 0) {
+                currentText = currentText.slice(0, -1);
+                charIndex--;
+            }
+
+            document.getElementById("typing-text").textContent = currentText;
+
+            if (!isDeleting && charIndex === texts[index].length) {
+                setTimeout(() => isDeleting = true, delay);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % texts.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? 50 : speed);
+        }
+
+        typeEffect();
+
+
     </script>
 </body>
 </html>
